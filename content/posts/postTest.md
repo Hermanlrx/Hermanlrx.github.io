@@ -1,38 +1,32 @@
 ---
 title: "My First Blog Post"
-date: 2024-03-22T10:00:00-00:00
+date: 2026-03-22T16:00:00-00:00
 draft: false
-tags: ["welcome", "intro"]
+tags: ["welcome", "intro", "GSoC"]
 categories: ["general"]
 author: "Your Name"
 description: "Welcome to my blog! This is my first post."
 cover:
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200"
-    alt: "Laptop on desk"
+    image: ""
+    alt: "Sunpy"
     caption: "Photo by Unsplash"
 ---
 
 ## Welcome to My Blog! 🎉
 
-This is my first blog post. I'm excited to start sharing my thoughts and experiences here.
+It finally happened. I have now been made a cog in the machine that is GSoC. 
+
+This page will now exists as a platform for my peers and future colleagues to enjoy my GSoC journey. Whether it be failed pull requests, frustrated unsquashed commits or just simple grammar mistakes I hope it can be helpful for all who endeavour to contribute to open source and academia. 
 
 ### What You Can Expect
 
-In this blog, I'll be writing about:
+On this page I will be keeping an up to date CV and blog from my recent GSoc 2026 experiences
 
-- **Technology** - Latest trends and tools I'm exploring
-- **Coding** - Tutorials, tips, and project walkthroughs  
-- **Learning** - My journey in software development
-- **Projects** - Cool things I'm building
 
 ### Why I Started This Blog
 
-I've always wanted a place to:
+1. Sharing GSoC journey
 
-1. Document my learning journey
-2. Share knowledge with others
-3. Build a portfolio of my work
-4. Connect with like-minded people
 
 ### A Code Example
 
@@ -47,7 +41,7 @@ print(greet("World"))
 
 ### What's Next?
 
-I'm planning to write about my recent project on [topic]. Stay tuned!
+I'm planning to write about my recent project on [GSoC]. Stay tuned!
 
 ---
 

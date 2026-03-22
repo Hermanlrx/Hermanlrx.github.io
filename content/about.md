@@ -6,7 +6,7 @@ summary: "Learn more about me"
 
 ## Hi, I'm Herman le Roux
 
-I'm a [your profession/role] passionate about [your interests].
+I'm a PhD student passionate about open source code and solar radio emissions.
 
 ### What I Do
 
