@@ -1,12 +1,118 @@
-baseURL = 'https://Hermanlrx.github.io/'
+baseURL = 'https://hermanlrx.github.io/'
 languageCode = 'en-us'
-title = 'My Blog'
+title = 'Herman le Roux'  # Change this!
 theme = 'PaperMod'
 
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
 [params]
-  defaultTheme = "auto"
+  env = "production"
+  title = "Herman le Roux"  
+  description = "A blog about my GSoC 2026 experience" 
+  keywords = ["Blog", "CV"]
+  author = "Herman le Roux"  
+  
+  # Theme settings
+  defaultTheme = "auto"  # auto, light, dark
+  disableThemeToggle = false
+  
+  # Article settings
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+  # Profile mode (homepage)
+  [params.profileMode]
+    enabled = true
+    title = "Hi, I'm Herman le Roux👋" 
+    subtitle = "Welcome to my blog."  
+    imageUrl = "https://avatars.githubusercontent.com/Hermanlrx"  # Your GitHub avatar or custom image
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "Profile picture"
+    
+    [[params.profileMode.buttons]]
+      name = "Posts"
+      url = "/posts"
+    [[params.profileMode.buttons]]
+      name = "Tags"
+      url = "/tags"
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "/about"
+
+  # Home info mode (alternative to profile mode)
+  # [params.homeInfoParams]
+  #   Title = "Hi there 👋"
+  #   Content = "Welcome to my blog"
+
+  # Social icons
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Hermanlrx"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/hlerouxsol/"  # Change or remove
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+# Main menu
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 40
+
+# Outputs
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+
+# Markup
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = true
+    lineNumbersInTable = true
