@@ -92,7 +92,7 @@ Co-supervised Honours research projects:
 - **Introduction to Programming with GUIs** (CMPG 122) - 1st year students (2023)
   - C# and Visual Studio
 
-### Tutor | 2019-2022
+### Tutor | 2021-2022
 **North-West University**
 
 - Object-Oriented Programming (CMPG 211) - 2nd year students
