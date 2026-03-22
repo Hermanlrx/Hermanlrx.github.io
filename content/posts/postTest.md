@@ -7,9 +7,10 @@ categories: ["general"]
 author: ""
 description: "Welcome to my blog! This is my first post."
 cover:
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC-icon.svg"
+    image: ""
     alt: "GSoC Icon"
     caption: "GSoC"
+    relative: true
 ---
 
 ## Welcome to My Blog! 
