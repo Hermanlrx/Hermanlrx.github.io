@@ -2,17 +2,17 @@
 title: "My First Blog Post"
 date: 2026-03-22T16:00:00-00:00
 draft: false
-tags: ["welcome", "intro", "GSoC"]
+tags: ["intro", "GSoC"]
 categories: ["general"]
-author: "Your Name"
+author: ""
 description: "Welcome to my blog! This is my first post."
 cover:
-    image: ""
-    alt: "Sunpy"
-    caption: "Photo by Unsplash"
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC-icon.svg"
+    alt: "GSoC Icon"
+    caption: "GSoC"
 ---
 
-## Welcome to My Blog! 🎉
+## Welcome to My Blog! 
 
 It finally happened. I have now been made a cog in the machine that is GSoC. 
 
@@ -41,7 +41,7 @@ print(greet("World"))
 
 ### What's Next?
 
-I'm planning to write about my recent project on [GSoC]. Stay tuned!
+I'm planning to write about my recent project on GSoC. Stay tuned!
 
 ---
 

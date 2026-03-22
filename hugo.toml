@@ -51,6 +51,9 @@ buildExpired = false
     imageTitle = "Profile picture"
     
     [[params.profileMode.buttons]]
+      name = "CV"
+      url = "/CV"
+    [[params.profileMode.buttons]]
       name = "Posts"
       url = "/posts"
     [[params.profileMode.buttons]]
@@ -59,6 +62,7 @@ buildExpired = false
     [[params.profileMode.buttons]]
       name = "About"
       url = "/about"
+    
 
   # Home info mode (alternative to profile mode)
   # [params.homeInfoParams]
@@ -78,6 +82,11 @@ buildExpired = false
 
 # Main menu
 [menu]
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "CV"
+    weight = 10
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
