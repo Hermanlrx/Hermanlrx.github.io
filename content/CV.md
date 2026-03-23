@@ -102,9 +102,8 @@ Co-supervised Honours research projects:
 
 ## Professional Development
 
-### Summer Schools & Workshops
-
-- TBC
+[### Summer Schools & Workshops]:#
+[- TBC]:#
 
 ---
 

@@ -43,7 +43,7 @@ buildExpired = false
   # Profile mode (homepage)
   [params.profileMode]
     enabled = true
-    title = "Hi, I'm Herman le Roux👋" 
+    title = "Hi, I'm Herman le Roux" 
     subtitle = "Welcome to my blog."  
     imageUrl = "https://avatars.githubusercontent.com/Hermanlrx"  # Your GitHub avatar or custom image
     imageWidth = 120
@@ -61,12 +61,10 @@ buildExpired = false
       url = "/tags"
     [[params.profileMode.buttons]]
       name = "About"
-      url = "/about"
-    
 
   # Home info mode (alternative to profile mode)
   # [params.homeInfoParams]
-  #   Title = "Hi there 👋"
+  #   Title = "Hi there!"
   #   Content = "Welcome to my blog"
 
   # Social icons

@@ -6,11 +6,8 @@ summary: "Learn more about me"
 
 ## Hi, I'm Herman le Roux
 
-I'm a PhD student passionate about open source code and solar radio emissions.
+I am a PhD student at DIAS currently working on automated solar radio classification software using I-LOFAR data.
 
-### What I Do
-
-- PhD Student
 
 ### Why This Blog?
 
