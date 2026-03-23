@@ -1,6 +1,6 @@
 baseURL = 'https://hermanlrx.github.io/'
 languageCode = 'en-us'
-title = 'Herman le Roux'  # Change this!
+title = 'Herman le Roux' 
 theme = 'PaperMod'
 
 enableRobotsTXT = true
@@ -43,9 +43,9 @@ buildExpired = false
   # Profile mode (homepage)
   [params.profileMode]
     enabled = true
-    title = "Hi, I'm Herman le Roux" 
+    title = "Hi, I'm Herman!" 
     subtitle = "Welcome to my blog."  
-    imageUrl = "https://avatars.githubusercontent.com/Hermanlrx"  # Your GitHub avatar or custom image
+    imageUrl = "https://avatars.githubusercontent.com/Hermanlrx" 
     imageWidth = 120
     imageHeight = 120
     imageTitle = "Profile picture"
