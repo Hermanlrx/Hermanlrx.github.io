@@ -1,0 +1,15 @@
+
+resources/
+
+
+.DS_Store
+Thumbs.db
+
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+go.sum
+.hugo_build.lock
