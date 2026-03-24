@@ -30,7 +30,7 @@ showToc: false
 ### B.Sc. Honours in Computer Science and Information Systems | 2022
 **North-West University, Potchefstroom, South Africa**
 
-- Graduated with Distinction (GPA: 3.8/4.0)
+- Graduated with Distinction
 - Specialisations AI, Image Processing, Decision Supports Systems and Databases.
 
 ### B.Sc. in Information Technology | 2019 - 2021
@@ -67,13 +67,14 @@ showToc: false
 **Dublin Institute for Advanced Studies**
 
 - Developing machine learning models for automated detection and classification of solar radio phenomena
-- Managing data pipelines and observation scheduling for Irish-LOFAR radio telescope
+- Managing data pipelines and observation scheduling for I-LOFAR radio telescope
 - Conducting research in solar physics, radio astronomy, and deep learning applications
+- Assisting masters research students in collecting and processing of data for M dwarf observations using I-LOFAR
 
 ### Research Supervision | 2023 - 2024
 **North-West University**
 
-Co-supervised Honours research projects:
+Co-supervised Honours research projects titled:
 - Generating type II and type III solar radio bursts using Generative Adversarial Networks
 - Advancing Sunspot Measurement and Analysis: Integrating Deep Learning and Digital Image Processing
 - Automated Calculation of Sunspot Area using Digital Image Processing
@@ -110,8 +111,8 @@ Co-supervised Honours research projects:
 ## Awards & Honors
 
 - **Second-Best Paper Award** - International Applied Computing Conference, Lisbon (2022)
-- **Best Research Project** - Honours group, North-West University (2022)
-- **Best Research Project Presentation** - North-West University (2022)
+- **Best Research Project** - B.Sc. Honours in IT & Computer Science cohort, North-West University (2022)
+- **Best Research Project Presentation** - B.Sc. Honours in IT & Computer Science cohort, North-West University (2022)
 
 ---
 
