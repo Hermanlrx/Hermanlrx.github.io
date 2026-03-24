@@ -27,13 +27,13 @@ The project that I have selected to apply for is called `radiospectra`. Radiospe
 
 During my 4th year research project I was suddenly faced with data that I had never worked with before! What is a `.fit` file? Why do they have headers? Why can't I just use plt.plot(fitFile)? All wonderful questions that I did not have answers to. But the human spirit prevailed, or at least in that case `radiospectra` did. 
 
-Using `radiospectra` I was able to plot e-CALLISTO data that would be used as part of my Masters project later on. At the time it was, however, clear that `radiospectra` lacked some usefull features. But to my mind all of these libraries were all created and packaged in these far away lands by coding fairies that sleep very little and see the Sun even less. So in the end I went my own way coding things as I needed them without real regard for future use.
+Using `radiospectra` I was able to plot e-CALLISTO data that would be used as part of my Masters project later on. At the time it was, however, clear that `radiospectra` lacked some useful features. But to my mind all of these libraries were all created and packaged in these far away lands by coding fairies that sleep very little and see the Sun even less. So in the end I went my own way coding things as I needed them without real regard for future use.
 
 Jumping to the present, I now find myself in a position where I can contribute to a package that I have used since I started my academic career! The most shocking part of it all? I could have been contributing that entire time. 
 
 The big lesson here is that it really is just that easy to start working on something! You just have to go looking in the right places and read a whole lot of docs. 
 
-As part of my PhD I will be working with solar radio data from the I-LOFAR radio station and hopefully other data sources in the future as well. Contributing and keeping track of the `radiospectra` package has become more important than ever as it will streamline alot of my workflow and hopefully community members using `radiospectra` as well.
+As part of my PhD I will be working with solar radio data from the I-LOFAR radio station and hopefully other data sources in the future as well. Contributing and keeping track of the `radiospectra` package has become more important than ever as it will streamline a lot of my workflow. Hopefully community members using `radiospectra` will benefit long term as well.
 
 
 ### What You Can Expect
