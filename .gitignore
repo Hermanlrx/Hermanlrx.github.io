@@ -1,15 +1,26 @@
-
 resources/
-
 
 .DS_Store
 Thumbs.db
-
 
 .vscode/
 .idea/
 *.swp
 *.swo
-
+uv.lock
 go.sum
 .hugo_build.lock
+
+# Python packaging
+*.egg-info/
+*.egg
+build/
+dist/
+__pycache__/
+*.pyc
+
+.venv/
+venv/
+
+data/orcid_cache.json
+data/last_modified.txt
