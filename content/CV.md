@@ -41,23 +41,6 @@ showToc: false
 
 ---
 
-## Publications & Presentations
-
-### Journal Articles
-
-**le Roux, H. et al.** (2025). Type II and Type III Solar Radio Burst Classification Using Transfer Learning. *Solar Physics*, 300(179). https://doi.org/10.1007/s11207-025-02595-w
-
-### Conference Proceedings
-
-**le Roux, H.** (2022). Deep learning approach to classifying solar radio bursts. *International Applied Computing Conference*, Lisbon, Portugal. [Peer-reviewed proceedings]
-
-
-### Peer Review
-
-- Reviewer for *Journal of Space Weather and Space Climate*
-
----
-
 ## Research Experience
 
 ### Ph.D. Researcher | 2025 - Present
