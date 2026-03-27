@@ -51,9 +51,6 @@ showToc: false
 
 **le Roux, H.** (2022). Deep learning approach to classifying solar radio bursts. *International Applied Computing Conference*, Lisbon, Portugal. [Peer-reviewed proceedings]
 
-### Posters & Presentations
-
-- "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA
 
 ### Peer Review
 
