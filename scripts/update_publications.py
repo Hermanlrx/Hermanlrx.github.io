@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""Fetch publications from ORCID and update publications page"""
-
 import os
 import re
 import requests
@@ -9,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 def fetch_orcid_data(orcid_id):
-    """Fetch article titles, years, journals, DOIs from ORCID"""
+    """Fetch article titles, years, journals, DOIs, and authors from ORCID"""
     headers = {'Accept': 'application/json'}
     articles = []
     
@@ -20,13 +17,39 @@ def fetch_orcid_data(orcid_id):
             for work in group.get('work-summary', []):
                 pub = extract_article_summary(work)
                 if pub:
+                    # Try to fetch authors using put-code
+                    put_code = work.get('put-code')
+                    if put_code:
+                        authors = fetch_work_details(orcid_id, put_code)
+                        if authors:
+                            pub['authors'] = authors
                     articles.append(pub)
     
     articles.sort(key=lambda x: x['year'], reverse=True)
     return articles
 
+def fetch_work_details(orcid_id, put_code):
+    """Fetch full work details including authors"""
+    headers = {'Accept': 'application/json'}
+    url = f'https://pub.orcid.org/v3.0/{orcid_id}/work/{put_code}'
+    
+    try:
+        resp = requests.get(url, headers=headers)
+        if resp.ok:
+            data = resp.json()
+            # Extract authors from full response
+            authors = []
+            for contributor in data.get('contributors', {}).get('contributor', []):
+                name = contributor.get('credit-name', {}).get('value', '')
+                if name:
+                    authors.append(name)
+            return authors
+    except:
+        pass
+    return []
+
 def extract_article_summary(work):
-    """Extract basic article data (no authors)"""
+    """Extract basic article data"""
     try:
         year = work.get('publication-date', {}).get('year', {}).get('value', '')
         title = work.get('title', {}).get('title', {}).get('value', '')
@@ -35,9 +58,6 @@ def extract_article_summary(work):
         
         journal = work.get('journal-title', {}).get('value', '') or \
                   work.get('container-title', {}).get('value', '')
-        
-        volume = work.get('journal-volume', {}).get('value', '')
-        page = work.get('page', {}).get('value', '')
         
         doi = ''
         for ext_id in work.get('external-ids', {}).get('external-id', []):
@@ -49,9 +69,8 @@ def extract_article_summary(work):
             'year': year,
             'title': title,
             'journal': journal,
-            'volume': volume,
-            'page': page,
-            'doi': doi
+            'doi': doi,
+            'authors': [] 
         }
     except:
         return None
@@ -64,7 +83,6 @@ def extract_titles_from_existing(existing_section):
         return titles
     
     # Pattern 1: Title in italics after authors (your format)
-    # Example: le Roux, H., ... (2025), *Title*, *Journal*...
     pattern1 = re.findall(r'\*([^*]+)\*,\s*\*', existing_section)
     titles.extend(pattern1)
     
@@ -129,7 +147,6 @@ def generate_page(articles, orcid_id, existing_content):
     
     # Extract existing titles
     existing_titles = extract_titles_from_existing(articles_section)
-    new_titles = [pub['title'] for pub in articles]
     
     # Find new articles (titles not in existing)
     for pub in articles:
@@ -143,7 +160,20 @@ def generate_page(articles, orcid_id, existing_content):
         
         # Add new articles as bullet points
         for pub in new_articles:
-            final_articles += f"\n- **ADD AUTHORS** ({pub['year']}),\n"
+            # Check if authors exist
+            if pub.get('authors') and pub['authors']:
+                # Format authors
+                authors = pub['authors']
+                if len(authors) == 1:
+                    author_str = authors[0]
+                elif len(authors) == 2:
+                    author_str = f"{authors[0]} & {authors[1]}"
+                else:
+                    author_str = f"{', '.join(authors[:-1])}, & {authors[-1]}"
+                final_articles += f"\n- {author_str} ({pub['year']}),\n"
+            else:
+                final_articles += f"\n- **ADD AUTHORS** ({pub['year']}),\n"
+            
             final_articles += f"  *{pub['title']}*,\n"
             final_articles += f"  *{pub['journal']}*"
             if pub['doi']:
@@ -153,7 +183,19 @@ def generate_page(articles, orcid_id, existing_content):
         # First run - create initial section with bullet points
         final_articles = ""
         for pub in articles:
-            final_articles += f"- **ADD AUTHORS** ({pub['year']}),\n"
+            # Check if authors exist
+            if pub.get('authors') and pub['authors']:
+                authors = pub['authors']
+                if len(authors) == 1:
+                    author_str = authors[0]
+                elif len(authors) == 2:
+                    author_str = f"{authors[0]} & {authors[1]}"
+                else:
+                    author_str = f"{', '.join(authors[:-1])}, & {authors[-1]}"
+                final_articles += f"- {author_str} ({pub['year']}),\n"
+            else:
+                final_articles += f"- **ADD AUTHORS** ({pub['year']}),\n"
+            
             final_articles += f"  *{pub['title']}*,\n"
             final_articles += f"  *{pub['journal']}*"
             if pub['doi']:
