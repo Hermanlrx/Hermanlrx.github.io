@@ -29,17 +29,35 @@ jobs:
           ORCID_ID: ${{ secrets.ORCID_ID }}
         run: python scripts/update_publications.py
       
-      - name: Check for new articles
-        id: check
+      - name: Check for articles needing authors
+        id: check_authors
         run: |
           if [ -f data/new_articles.json ]; then
-            echo "new=true" >> $GITHUB_OUTPUT
+            echo "needs_authors=true" >> $GITHUB_OUTPUT
           else
-            echo "new=false" >> $GITHUB_OUTPUT
+            echo "needs_authors=false" >> $GITHUB_OUTPUT
           fi
       
+      - name: Check if publications.md changed
+        id: check_changed
+        run: |
+          if git diff --quiet content/publications.md; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit changes
+        if: steps.check_changed.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/publications.md
+          git commit -m "Update publications from ORCID"
+          git push
+      
       - name: Create Pull Request
-        if: steps.check.outputs.new == 'true'
+        if: steps.check_authors.outputs.needs_authors == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "Add new publications from ORCID"
