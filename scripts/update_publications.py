@@ -261,8 +261,9 @@ def main():
     new_content, new_articles = generate_page(articles, orcid_id, existing)
     pub_path.write_text(new_content)
     
-    # Save new articles info for GitHub Action
-    if new_articles:
+    articles_needing_authors = [a for a in new_articles if not (a.get('authors') and a['authors'])]
+
+    if articles_needing_authors:
         Path('data').mkdir(exist_ok=True)
         with open('data/new_articles.json', 'w') as f:
             json.dump([{
@@ -270,9 +271,9 @@ def main():
                 'year': a['year'],
                 'journal': a['journal'],
                 'doi': a['doi']
-            } for a in new_articles], f, indent=2)
-        print(f" {len(new_articles)} new article(s) detected!")
-        for article in new_articles:
+            } for a in articles_needing_authors], f, indent=2)
+        print(f" {len(articles_needing_authors)} new article(s) need authors!")
+        for article in articles_needing_authors:
             print(f"  - {article['title']}")
     else:
         # Remove new_articles.json if it exists

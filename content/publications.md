@@ -16,9 +16,6 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 - Herman le Roux, Günther Drevin, Ruhann Steyn, Du Toit Strauss (2022),
   *DEEP LEARNING APPROACH TO CLASSIFYING SOLAR RADIO BURSTS*,
   *Proceedings of the International Conferences on Applied Computing 2022 and WWW/Internet 2022*. [DOI](https://doi.org/10.33965/ac_icwi2022_202208l002)
-- Herman le Roux, Ruhann Steyn, Du Toit Strauss, Mark Daly, Peter T. Gallagher, Jeremiah Scully, Shane A. Maloney, Christian Monstein, & Günther Drevin (2025),
-  *Type II and Type III Solar Radio Burst Classification Using Transfer Learning*,
-  *Solar Physics*. [DOI](https://doi.org/10.1007/s11207-025-02595-w)
 
 
 ## Peer Review
