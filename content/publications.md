@@ -21,8 +21,6 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
   *DEEP LEARNING APPROACH TO CLASSIFYING SOLAR RADIO BURSTS*,
   *Proceedings of the International Conferences on Applied Computing 2022 and WWW/Internet 2022*. [DOI](https://doi.org/10.33965/ac_icwi2022_202208l002)
 
-
-
 ## Peer Review
 
 - le Roux, H., Drevin, G.R., Strauss, D.T. Steyn, R, (2022)
@@ -37,4 +35,4 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 - "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 2025
 
-*Last updated: 2026-03-27 11:50:37 UTC*
+*Last updated: 2026-03-27 11:56:53 UTC*
