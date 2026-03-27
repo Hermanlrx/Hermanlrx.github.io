@@ -12,14 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: write
+      pull-requests: write
     
     steps:
       - uses: actions/checkout@v4
       
       - uses: actions/setup-python@v5
         with:
-          python-version: 'latest'
+          python-version: '3.14'
       
       - name: Install dependencies
         run: pip install requests
@@ -38,42 +38,20 @@ jobs:
             echo "new=false" >> $GITHUB_OUTPUT
           fi
       
-      - name: Create issue on commit changes
+      - name: Create Pull Request
         if: steps.check.outputs.new == 'true'
-        uses: actions/github-script@v7
+        uses: peter-evans/create-pull-request@v6
         with:
-          script: |
-            const fs = require('fs');
-            const articles = JSON.parse(fs.readFileSync('data/new_articles.json', 'utf8'));
+          commit-message: "Add new publications from ORCID"
+          title: "New publications - add authors"
+          body: |
+            New publications detected. Please add authors before merging.
             
-            let body = '## New publications detected\n\n';
-            body += 'Please add authors to these articles in `content/publications.md`:\n\n';
+            Files to edit:
+            - `content/publications.md`
             
-            for (const a of articles) {
-              body += `### ${a.title}\n`;
-              body += `- **Year:** ${a.year}\n`;
-              body += `- **Journal:** ${a.journal}\n`;
-              if (a.doi) body += `- **DOI:** ${a.doi}\n`;
-              body += '\n';
-            }
-            
-            body += 'Replace `**ADD AUTHORS**` with proper author names.\n';
-            body += 'Format: `Author, A. B., Author, C. D. (Year), *Title*, *Journal*`\n';
-            
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `New publications (${articles.length} article${articles.length > 1 ? 's' : ''}) - add authors`,
-              body: body,
-              labels: ['publications']
-            });
-          run:
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add content/publications.md
-            if [ -f data/new_articles.json ]; then
-              git add data/new_articles.json
-            fi
-            git diff --quiet && git diff --staged --quiet || git commit -m "Update publications from ORCID"
-            git push || true
-          
+            Look for `**ADD AUTHORS**` placeholders.
+          branch: "update-publications"
+          base: "main"
+          delete-branch: true
+          labels: "publications"
