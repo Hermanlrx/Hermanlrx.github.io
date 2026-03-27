@@ -53,5 +53,4 @@ jobs:
             Look for `**ADD AUTHORS**` placeholders.
           branch: "update-publications"
           base: "main"
-          delete-branch: true
           labels: "publications"
