@@ -13,6 +13,16 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 ## Articles
 
+- **ADD AUTHORS** (2025),
+  *Type II and Type III Solar Radio Burst Classification Using Transfer Learning*,
+  *Solar Physics*. [DOI](https://doi.org/10.1007/s11207-025-02595-w)
+
+- **ADD AUTHORS** (2022),
+  *DEEP LEARNING APPROACH TO CLASSIFYING SOLAR RADIO BURSTS*,
+  *Proceedings of the International Conferences on Applied Computing 2022 and WWW/Internet 2022*. [DOI](https://doi.org/10.33965/ac_icwi2022_202208l002)
+
+
+
 ## Peer Review
 
 - le Roux, H., Drevin, G.R., Strauss, D.T. Steyn, R, (2022)
@@ -27,4 +37,4 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 - "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 2025
 
-*Last updated: 2026-03-27 11:15:20 UTC*
+*Last updated: 2026-03-27 11:50:37 UTC*
