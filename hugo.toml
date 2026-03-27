@@ -54,6 +54,9 @@ buildExpired = false
       name = "CV"
       url = "/CV"
     [[params.profileMode.buttons]]
+      name = "Publications"
+      url = "/Publications"
+    [[params.profileMode.buttons]]
       name = "Posts"
       url = "/posts"
     [[params.profileMode.buttons]]
@@ -85,6 +88,11 @@ buildExpired = false
     name = "CV"
     url = "CV"
     weight = 5
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "Publications"
+    weight = 8
   [[menu.main]]
     identifier = "posts"
     name = "Posts"

@@ -1,6 +1,8 @@
 ---
 title: "Publications"
-date: 2026-03-26
+url: "/Publications/"
+date: 2026-03-27
+showToc: true
 draft: false
 layout: "single"
 ---
@@ -8,17 +10,14 @@ layout: "single"
 # Publications
 
 This page is automatically updated from my [ORCID profile](https://orcid.org/0000-0002-1805-0706).  
-Last synchronized: 2026-03-26 15:12:36 UTC
 
 ## Articles
 
-**Type II and Type III Solar Radio Burst Classification Using Transfer Learning**  
-*Solar Physics*, 2025  
-[DOI](https://doi.org/10.1007/s11207-025-02595-w)  
+## Peer Review
 
-**DEEP LEARNING APPROACH TO CLASSIFYING SOLAR RADIO BURSTS**  
-*Proceedings of the International Conferences on Applied Computing 2022 and WWW/Internet 2022*, 2022  
-[DOI](https://doi.org/10.33965/ac_icwi2022_202208l002)  
+- le Roux, H., Drevin, G.R., Strauss, D.T. Steyn, R, (2022)
+- le Roux, H., Steyn, R., Strauss, D.T., Daly, M., Gallagher P.T., Scully, J., Maloney S.A., Monstein C., Drevin, G.R, (2025)
+- Peer review for Journal of Space Weather and Space Climate - 2026
 
 ## Presentations
 
@@ -26,8 +25,6 @@ Last synchronized: 2026-03-26 15:12:36 UTC
 
 ## Posters
 
-*Manually maintained*
+- "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 2025
 
----
-
-*Last updated: 2026-03-26 15:12:36 UTC*
+*Last updated: 2026-03-27 11:15:20 UTC*
