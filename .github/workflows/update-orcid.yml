@@ -1,6 +1,8 @@
 name: Update ORCID Publications
 
 on:
+  push:
+    branches: [main, github-actions-updates ]
   schedule:
     # First Monday of every month at 2:00 AM UTC
     # This cron runs on days 1-7, and if it's Monday (1), it runs
