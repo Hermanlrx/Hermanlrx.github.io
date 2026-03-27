@@ -2,163 +2,57 @@ name: Update ORCID Publications
 
 on:
   push:
-    branches: [main, github-actions-updates ]
-  schedule:
-    # First Monday of every month at 2:00 AM UTC
-    # This cron runs on days 1-7, and if it's Monday (1), it runs
-    - cron: '0 2 1-7 * *'
-  workflow_dispatch:  # Allow manual trigger
+    branches: [ "*" ]
+  workflow_dispatch:
 
 jobs:
-  check-and-update:
+  update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
       issues: write
-      pull-requests: write
     
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
       
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       
       - name: Install dependencies
         run: pip install requests
       
-      - name: Run ORCID update script
+      - name: Run update
         env:
           ORCID_ID: ${{ secrets.ORCID_ID }}
         run: python scripts/update_publications.py
       
       - name: Check for new articles
-        id: check_new
+        id: check
         run: |
           if [ -f data/new_articles.json ]; then
-            echo "has_new=true" >> $GITHUB_OUTPUT
-            echo "NEW_ARTICLES=$(cat data/new_articles.json)" >> $GITHUB_OUTPUT
+            echo "new=true" >> $GITHUB_OUTPUT
           else
-            echo "has_new=false" >> $GITHUB_OUTPUT
+            echo "new=false" >> $GITHUB_OUTPUT
           fi
       
-      - name: Create Issue for New Publications
-        if: steps.check_new.outputs.has_new == 'true'
+      - name: Create issue
+        if: steps.check.outputs.new == 'true'
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            const newArticles = JSON.parse(fs.readFileSync('data/new_articles.json', 'utf8'));
-            
-            let body = '##New publications detected from ORCID\n\n';
-            body += 'The following new publications were found in your ORCID profile. ';
-            body += '**Please add authors** before this issue is closed.\n\n';
-            body += '### New Publications:\n\n';
-            
-            for (const article of newArticles) {
-              body += `#### ${article.title}\n`;
-              body += `- **Year:** ${article.year}\n`;
-              body += `- **Journal:** ${article.journal}\n`;
-              if (article.doi) {
-                body += `- **DOI:** ${article.doi}\n`;
-              }
-              body += '\n';
-            }
-            
-            body += '### How to add authors:\n\n';
-            body += '1. Edit `content/publications.md`\n';
-            body += '2. Find the entries marked with `**ADD AUTHORS**`\n';
-            body += '3. Replace with authors in this format:\n\n';
-            body += '```\n';
-            body += 'Author, A. B., Author, C. D., & Author, E. F. (Year),\n';
-            body += '*Title*,\n';
-            body += '*Journal*. [DOI](https://doi.org/...)\n';
-            body += '```\n\n';
-            body += '4. Remove the `**ADD AUTHORS**` placeholder\n';
-            body += '5. Commit the changes and close this issue\n\n';
-            body += '### Important\n';
-            body += 'The website will **not** be updated with these publications until you add authors and close this issue.\n\n';
-            body += 'Once you close this issue, the next workflow run will preserve your formatting.';
-            
-            const issue = await github.rest.issues.create({
+            const articles = JSON.parse(require('fs').readFileSync('data/new_articles.json', 'utf8'));
+            github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `New publications detected (${newArticles.length} article${newArticles.length > 1 ? 's' : ''}) - authors needed`,
-              body: body,
-              labels: ['publications', 'authors-needed']
+              title: `New publications: ${articles.length} article(s)`,
+              body: `Add authors to:\n${articles.map(a => `- ${a.title}`).join('\n')}`
             });
-            
-            // Save issue number for later
-            fs.writeFileSync('data/issue_number.txt', issue.data.number.toString());
-            
-            console.log(`Created issue #${issue.data.number}`);
       
-      - name: Commit placeholder changes
-        if: steps.check_new.outputs.has_new == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/publications.md data/new_articles.json data/issue_number.txt
-          git diff --quiet && git diff --staged --quiet || git commit -m "Add placeholders for new publications from ORCID [skip ci]"
-          git push
-      
-      - name: Check if issue is resolved
-        if: steps.check_new.outputs.has_new == 'false'
-        run: |
-          # If there was a previous issue, check if it's closed
-          if [ -f data/issue_number.txt ]; then
-            echo "Previous issue exists, will check status in next step"
-          fi
-      
-      - name: Verify issue closure
-        if: steps.check_new.outputs.has_new == 'false' && github.event_name != 'workflow_dispatch'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const issueFile = 'data/issue_number.txt';
-            
-            if (fs.existsSync(issueFile)) {
-              const issueNumber = parseInt(fs.readFileSync(issueFile, 'utf8').trim());
-              
-              try {
-                const issue = await github.rest.issues.get({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: issueNumber
-                });
-                
-                if (issue.data.state !== 'closed') {
-                  console.log(`Issue #${issueNumber} is still open. Please add authors and close it.`);
-                  console.log(`View at: https://github.com/${context.repo.owner}/${context.repo.repo}/issues/${issueNumber}`);
-                  process.exit(1);
-                } else {
-                  console.log(`Issue #${issueNumber} is closed. Proceeding.`);
-                  // Clean up the issue file
-                  fs.unlinkSync(issueFile);
-                  if (fs.existsSync('data/new_articles.json')) {
-                    fs.unlinkSync('data/new_articles.json');
-                  }
-                }
-              } catch (error) {
-                console.log(`Could not find issue #${issueNumber}, continuing...`);
-                fs.unlinkSync(issueFile);
-              }
-            }
-      
-      - name: Commit final updates (if any)
-        if: steps.check_new.outputs.has_new == 'false'
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add content/publications.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update publications from ORCID [skip ci]"
-          git push
-      
-      - name: Clean up
-        run: |
-          rm -f data/new_articles.json data/issue_number.txt
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update publications"
+          git push || true
