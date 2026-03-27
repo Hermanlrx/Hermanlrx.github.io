@@ -1,8 +1,8 @@
 name: Update ORCID Publications
 
 on:
-  push:
-    branches: [ "*" ]
+  schedule:
+    - cron: '0 7 1-7 * 1'
   workflow_dispatch:
 
 jobs:
@@ -41,18 +41,35 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const articles = JSON.parse(require('fs').readFileSync('data/new_articles.json', 'utf8'));
+            const fs = require('fs');
+            const articles = JSON.parse(fs.readFileSync('data/new_articles.json', 'utf8'));
+            
+            let body = '## New publications detected\n\n';
+            body += 'Please add authors to these articles in `content/publications.md`:\n\n';
+            
+            for (const a of articles) {
+              body += `### ${a.title}\n`;
+              body += `- **Year:** ${a.year}\n`;
+              body += `- **Journal:** ${a.journal}\n`;
+              if (a.doi) body += `- **DOI:** ${a.doi}\n`;
+              body += '\n';
+            }
+            
+            body += 'Replace `**ADD AUTHORS**` with proper author names.\n';
+            body += 'Format: `Author, A. B., Author, C. D. (Year), *Title*, *Journal*`\n';
+            
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `New publications: ${articles.length} article(s)`,
-              body: `Add authors to:\n${articles.map(a => `- ${a.title}`).join('\n')}`
+              title: `New publications (${articles.length} article${articles.length > 1 ? 's' : ''}) - add authors`,
+              body: body,
+              labels: ['publications']
             });
       
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/publications.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update publications"
+          git add content/publications.md data/new_articles.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update publications from ORCID"
           git push || true
