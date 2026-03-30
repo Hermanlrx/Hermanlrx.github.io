@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 url: "/Publications/"
-date: 2026-03-27
+date: 2026-03-30
 showToc: true
 draft: false
 layout: "single"
@@ -20,7 +20,6 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
   *Type II and Type III Solar Radio Burst Classification Using Transfer Learning*,
   *Solar Physics*. [DOI](https://doi.org/10.1007/s11207-025-02595-w)
 
-
 ## Peer Review
 
 - Peer review for Journal of Space Weather and Space Climate - 2026
@@ -33,4 +32,4 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 - "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 2025
 
-*Last updated: 2026-03-27 15:26:10 UTC*
+*Last updated: 2026-03-30 08:22:57 UTC*
