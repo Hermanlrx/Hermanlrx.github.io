@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 url: "/Publications/"
-date: 2026-03-30
+date: 2026-04-01
 showToc: true
 draft: false
 layout: "single"
@@ -32,4 +32,4 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 - "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 2025
 
-*Last updated: 2026-03-30 08:22:57 UTC*
+*Last updated: 2026-04-01 08:17:58 UTC*
