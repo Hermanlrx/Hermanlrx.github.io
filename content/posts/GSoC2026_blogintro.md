@@ -71,7 +71,7 @@ In my coming post I'm planning to write about my first pull request made to `Sun
                     cdf.varattsget("FREQUENCY")["UNITS"]
                 )
 ```
-My initial thought was that this would be a very simple job! I mean, how difficult can an elif be right? Keep a lookout for the next post to find out more!
+My initial thought was that this would be a very simple job! I mean, how difficult can an `elif` be right? Keep a lookout for the next post to find out more!
 
 ![Does he know?](/images/thisisfine.gif)
 ---
