@@ -25,9 +25,8 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 - Peer review for Journal of Space Weather and Space Climate - 2026
 
 
-
 ## Posters
 
 - "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 2025
 
-*Last updated: 2026-05-08 14:45:04 UTC*
+*Last updated: 2026-05-08 14:54:44 UTC*
