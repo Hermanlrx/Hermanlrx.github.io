@@ -108,7 +108,6 @@ def generate_page(articles, orcid_id, existing_content):
     # Default sections
     articles_section = ""
     peer_reviews = "*Manually maintained*"
-    presentations = "*Manually maintained*"
     posters = "*Manually maintained*"
     
     # Track which articles are new
@@ -137,9 +136,6 @@ def generate_page(articles, orcid_id, existing_content):
         if match:
             peer_reviews = match.group(1).strip()
         
-        match = re.search(r'## Presentations\n(.*?)(?=\n## |$)', content, re.DOTALL)
-        if match:
-            presentations = match.group(1).strip()
         
         match = re.search(r'## Posters\n(.*?)(?=\n## |$)', content, re.DOTALL)
         if match:
@@ -234,9 +230,6 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/{or
 
 {peer_reviews}
 
-## Presentations
-
-{presentations}
 
 ## Posters
 
