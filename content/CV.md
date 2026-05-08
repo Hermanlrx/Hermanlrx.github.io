@@ -66,7 +66,7 @@ Co-supervised Honours research projects titled:
 ### Temporary Lecturer | 2023 - 2025
 **North-West University**
 
-- **Artificial Intelligence** (CMPG 313) - 3rd year students (2023, 2024, 2025 distance cohort)
+- **Artificial Intelligence** (CMPG 313) - 3rd year students in 2023 and 2024 and the distance cohort in 2025
   - Curriculum development, lecture delivery, assignment and exam creation and assessment
 - **Decision Support Systems** (ITRI 628) - Graduate level (2024)
 - **Communications Skills** (CMPG 214) - 2nd year IT/CS students (2023, 2024)
@@ -80,11 +80,9 @@ Co-supervised Honours research projects titled:
 - Introduction to GUIs (CMPG 122) - 1st year students
 
 ---
+### Summer Schools & Workshops:
 
-## Professional Development
-
-[### Summer Schools & Workshops]:#
-[- TBC]:#
+- 2nd European Solar Physics Division (ESPD) Summer School  27 April – 1 May 2026 (online attendance)
 
 ---
 
@@ -93,12 +91,13 @@ Co-supervised Honours research projects titled:
 - **Second-Best Paper Award** - International Applied Computing Conference, Lisbon (2022)
 - **Best Research Project** - B.Sc. Honours in IT & Computer Science cohort, North-West University (2022)
 - **Best Research Project Presentation** - B.Sc. Honours in IT & Computer Science cohort, North-West University (2022)
+- **Second-Best** - Software Research Poster at the Engineering Expo of the Technological University of the Shannon (2026)
 
 ---
 
 ## Outreach & Community Engagement
 
 - **DIAS Dunsink Observatory** - Public outreach activities (2025-Present)
-- **Robotics Education** - Community outreach for underprivileged children (2022-2024)
+- **Robotics Education** - Community outreach for children (2022-2024)
 
 ---

@@ -24,9 +24,8 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 - Peer review for Journal of Space Weather and Space Climate - 2026
 
-## Presentations
+[## Presentations]:#
 
-*Manually maintained*
 
 ## Posters
 
