@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 url: "/Publications/"
-date: 2026-05-01
+date: 2026-05-08
 showToc: true
 draft: false
 layout: "single"
@@ -26,9 +26,12 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 [## Presentations]:#
 
+## Presentations
+
+*Manually maintained*
 
 ## Posters
 
 - "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 2025
 
-*Last updated: 2026-05-01 08:58:59 UTC*
+*Last updated: 2026-05-08 14:45:04 UTC*
