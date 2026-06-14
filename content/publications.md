@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 url: "/Publications/"
-date: 2026-06-01
+date: 2026-06-14
 showToc: true
 draft: false
 layout: "single"
@@ -29,4 +29,5 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 - "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 22-26 September 2025
 - "Segmenting Solar Radio Bursts Observed by LOFAR in Ireland, the Netherlands and Latvia" presented at the LOFAR Annual Meeting - 8-12 June 2026 Trinity College, Dublin
-*Last updated: 2026-05-08 14:45:04 UTC*
+
+*Last updated: 2026-06-14 09:15:39 UTC*
