@@ -82,8 +82,10 @@ Co-supervised Honours research projects titled:
 ---
 ### Summer Schools & Workshops:
 
-- 2nd European Solar Physics Division (ESPD) - Summer School ~ Dubrovnik, Croatia  27 April – 1 May 2026 
-- Bridging Gaps in Heliospheric Radio Data Analyses - Workshop ~ Leiden, The Netherlands  18 May - 22 May 2026 
+- 2nd European Solar Physics Division (ESPD)
+   Summer School ~ Dubrovnik, Croatia  27 April – 1 May 2026 
+- Bridging Gaps in Heliospheric Radio Data Analyses 
+  Workshop ~ Leiden, The Netherlands  18 May - 22 May 2026 
 ---
 
 ## Awards & Honors
