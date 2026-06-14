@@ -27,7 +27,9 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 
 ## Posters
 
-- "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA - 22-26 September 2025
-- "Segmenting Solar Radio Bursts Observed by LOFAR in Ireland, the Netherlands and Latvia" presented at the LOFAR Annual Meeting - 8-12 June 2026 Trinity College, Dublin
+- "Segmentation of Solar Radio Bursts using Detectron2" presented at ML-Helio IHDEA
+    22-26 September 2025
+- "Segmenting Solar Radio Bursts Observed by LOFAR in Ireland, the Netherlands and Latvia" presented at the LOFAR Annual Meeting
+    8-12 June 2026 Trinity College, Dublin
 
 *Last updated: 2026-06-14 15:19:30 UTC*
