@@ -32,4 +32,4 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/000
 - "Segmenting Solar Radio Bursts Observed by LOFAR in Ireland, the Netherlands and Latvia" presented at the LOFAR Annual Meeting
     8-12 June 2026 Trinity College, Dublin
 
-*Last updated: 2026-06-14 15:19:30 UTC*
+*Last updated: 2026-06-14 15:22:38 UTC*
