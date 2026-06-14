@@ -2,15 +2,11 @@
 title: "CV"
 url: "/CV/"
 summary: "My CV"
-showToc: false
+showToc: true 
 ---
-
-
 # Herman le Roux
 
 **Email:** herman.leroux@dias.ie
-
-
 ---
 
 ## Education
