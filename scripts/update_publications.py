@@ -213,14 +213,10 @@ def generate_page(articles, orcid_id, existing_content):
 title: "Publications"
 url: "/Publications/"
 date: {now.strftime('%Y-%m-%d')}
-showToc: true
+showToc: false 
 draft: false
 layout: "single"
 ---
-
-# Publications
-
-This page is automatically updated from my [ORCID profile](https://orcid.org/{orcid_id}).  
 
 ## Articles
 
@@ -234,7 +230,8 @@ This page is automatically updated from my [ORCID profile](https://orcid.org/{or
 ## Posters
 
 {posters}
-
+---
+This page is automatically updated from my [ORCID profile](https://orcid.org/{orcid_id}). 
 *Last updated: {now.strftime('%Y-%m-%d %H:%M:%S UTC')}*"""
     
     return page, new_articles

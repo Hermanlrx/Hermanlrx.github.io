@@ -1,6 +1,7 @@
 ---
 title: "About"
 url: "/about/"
+showToc: false
 summary: "Learn more about me"
 ---
 

@@ -4,9 +4,6 @@ url: "/CV/"
 summary: "My CV"
 showToc: true 
 ---
-# Herman le Roux
-
-**Email:** herman.leroux@dias.ie
 ---
 
 ## Education
@@ -99,3 +96,8 @@ Co-supervised Honours research projects titled:
 - **Robotics Education** - Community outreach for children (2022-2024)
 
 ---
+
+# Herman le Roux
+
+
+**Email:** herman.leroux@dias.ie
