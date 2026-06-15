@@ -2,7 +2,7 @@
 title: "Publications"
 url: "/Publications/"
 date: 2026-06-15
-showToc: false
+showToc: false 
 draft: false
 layout: "single"
 ---
@@ -30,5 +30,7 @@ layout: "single"
 ---
 This page is automatically updated from my [ORCID profile](https://orcid.org/0000-0002-1805-0706).
 ---
+This page is automatically updated from my [ORCID profile](https://orcid.org/0000-0002-1805-0706).
+---
 This page is automatically updated from my [ORCID profile](https://orcid.org/0000-0002-1805-0706). 
-*Last updated: 2026-06-15 22:17:47 UTC*
+*Last updated: 2026-06-15 22:19:43 UTC*
