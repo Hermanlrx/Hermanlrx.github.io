@@ -27,10 +27,5 @@ layout: "single"
     22-26 September 2025
 - "Segmenting Solar Radio Bursts Observed by LOFAR in Ireland, the Netherlands and Latvia" presented at the LOFAR Annual Meeting
     8-12 June 2026 Trinity College, Dublin
----
-This page is automatically updated from my [ORCID profile](https://orcid.org/0000-0002-1805-0706).
----
-This page is automatically updated from my [ORCID profile](https://orcid.org/0000-0002-1805-0706).
----
-This page is automatically updated from my [ORCID profile](https://orcid.org/0000-0002-1805-0706). 
-*Last updated: 2026-06-15 22:19:43 UTC*
+
+*Last updated: 2026-06-15 23:27:22 UTC*

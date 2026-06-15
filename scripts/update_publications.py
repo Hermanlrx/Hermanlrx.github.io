@@ -230,8 +230,7 @@ layout: "single"
 ## Posters
 
 {posters}
----
-This page is automatically updated from my [ORCID profile](https://orcid.org/{orcid_id}). 
+
 *Last updated: {now.strftime('%Y-%m-%d %H:%M:%S UTC')}*"""
     
     return page, new_articles
