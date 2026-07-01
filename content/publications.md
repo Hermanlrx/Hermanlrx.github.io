@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 url: "/Publications/"
-date: 2026-06-15
+date: 2026-07-01
 showToc: false 
 draft: false
 layout: "single"
@@ -28,4 +28,4 @@ layout: "single"
 - "Segmenting Solar Radio Bursts Observed by LOFAR in Ireland, the Netherlands and Latvia" presented at the LOFAR Annual Meeting
     8-12 June 2026 Trinity College, Dublin
 
-*Last updated: 2026-06-15 22:28:21 UTC*
+*Last updated: 2026-07-01 10:39:36 UTC*
