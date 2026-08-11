@@ -1,0 +1,54 @@
+:root {
+    --theme: #F4F1EA;
+    --entry: #EBE6DC;
+    --primary: #2D302B;
+    --secondary: #6B6D63;
+    --tertiary: #D8D2C5;
+    --content: #2D302B;
+    --code-bg: #E6E1D6;
+    --border: #D8D2C5;
+}
+
+.dark {
+    --theme: #20231F;
+    --entry: #292C27;
+    --primary: #E4E0D6;
+    --secondary: #A5A59A;
+    --tertiary: #3B3E36;
+    --content: #E4E0D6;
+    --code-bg: #292C27;
+    --border: #3B3E36;
+}
+
+a {
+    color: #6F7658;
+}
+
+a:hover {
+    color: #565C45;
+}
+
+.dark a {
+    color: #A3A878;
+}
+
+.dark a:hover {
+    color: #C0C596;
+}
+
+.dark .nav a:hover {
+    color: #C0C596;
+    background-color: #30342D;
+}
+
+.nav a {
+    font-weight: 600;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+.nav a:hover {
+    color: #565C45;
+    background-color: #DDD8CC;
+}
