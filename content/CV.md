@@ -9,8 +9,8 @@ showToc: true
 ## Education
 
 ### Ph.D. in Computer Engineering | 2025 - Present
-**Dublin Institute for Advanced Studies & Technological University of the Shannon**  
-*Dublin, Ireland*
+**Dublin Institute for Advanced Studies & Technological University of the Shannon, Dublin, Ireland**
+#### Supervised by Prof. Peter Gallagher, Dr Mark Daly, Dr Shane Maloney, Dr Jeremiah Scully
 
 - Research focus: Machine learning and image processing techniques for detection and classification of solar features and activity
 - Chief Observer for Irish-LOFAR radio telescope (data management and observation scheduling)
