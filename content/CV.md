@@ -75,19 +75,21 @@ Co-supervised Honours research projects titled:
 ---
 ### Summer Schools & Workshops:
 
+- Bridging Gaps in Heliospheric Radio Data Analyses 
+   Workshop ~ Leiden, The Netherlands  18 May - 22 May 2026
 - 2nd European Solar Physics Division (ESPD)
    Summer School ~ Dubrovnik, Croatia  27 April – 1 May 2026 
-- Bridging Gaps in Heliospheric Radio Data Analyses 
-  Workshop ~ Leiden, The Netherlands  18 May - 22 May 2026 
+- The Machine Learning Summer School (MLSS Africa) 
+   ~ Gordons Bay, Cape Town 9 January - 20 Januaray 2023
 ---
 
 ## Awards & Honors
 
-- **Second-Best Paper Award** - International Applied Computing Conference, Lisbon (2022)
+- **Second-Best** - Software Research Poster at the Engineering Expo of the Technological University of the Shannon (2026)
+- **Silver Medal** - Data Anaylsis and Visualization BRICS Skills Competition International Finals hosted in Zhuhai, China (2023)
 - **Best Research Project** - B.Sc. Honours in IT & Computer Science cohort, North-West University (2022)
 - **Best Research Project Presentation** - B.Sc. Honours in IT & Computer Science cohort, North-West University (2022)
-- **Second-Best** - Software Research Poster at the Engineering Expo of the Technological University of the Shannon (2026)
-
+- **Second-Best Paper Award** - International Applied Computing Conference, Lisbon (2022)
 ---
 
 ## Outreach & Community Engagement
