@@ -14,6 +14,7 @@ showToc: true
 
 - Research focus: Machine learning and image processing techniques for detection and classification of solar features and activity
 - Chief Observer for Irish-LOFAR radio telescope (data management and observation scheduling)
+- Completed modules in Advanced Machine Learning and Data Visualization
 
 ### M.Sc. in Computer Science | 2023 - 2024
 **North-West University, Potchefstroom, South Africa**
@@ -99,7 +100,8 @@ Co-supervised Honours research projects titled:
 
 ---
 
-# Herman le Roux
+## FAIR and Reproducible Science
+- Open source contributions to [Sunpy](https://github.com/sunpy/sunpy/commits/main/?author=Hermanlrx) and [Sunpy/radiospectra](https://github.com/sunpy/radiospectra/commits/main/?author=Hermanlrx)
 
-
+# Contact details
 **Email:** herman.leroux@dias.ie
