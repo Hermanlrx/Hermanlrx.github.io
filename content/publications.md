@@ -28,4 +28,4 @@ layout: "single"
 - "Segmenting Solar Radio Bursts Observed by LOFAR in Ireland, the Netherlands and Latvia" presented at the LOFAR Annual Meeting
     8-12 June 2026 Trinity College, Dublin
 
-*Last updated: 2026-08-20 22:05:54 UTC*
+*Last updated: 2026-08-20 22:23:28 UTC*
