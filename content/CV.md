@@ -100,8 +100,9 @@ Co-supervised Honours research projects titled:
 
 ---
 
-## FAIR and Reproducible Science
-- Open source contributions to [Sunpy](https://github.com/sunpy/sunpy/commits/main/?author=Hermanlrx) and [Sunpy/radiospectra](https://github.com/sunpy/radiospectra/commits/main/?author=Hermanlrx)
+## Open Source Software Contributions
+- [Sunpy](https://github.com/sunpy/sunpy/commits/main/?author=Hermanlrx)
+- [Sunpy/radiospectra](https://github.com/sunpy/radiospectra/commits/main/?author=Hermanlrx)
 
-# Contact details
+## Contact details
 **Email:** herman.leroux@dias.ie
